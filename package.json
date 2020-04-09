@@ -1,0 +1,22 @@
+{
+  "name": "algochallenge",
+  "version": "1.0.0",
+  "description": "algorithm challenge questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taddes/AlgoChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taddes/AlgoChallenge/issues"
+  },
+  "homepage": "https://github.com/taddes/AlgoChallenge#readme",
+  "dependencies": {
+    "jest": "^25.3.0"
+  }
+}
