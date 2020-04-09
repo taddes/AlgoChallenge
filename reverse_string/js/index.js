@@ -53,12 +53,13 @@ reverse = (str) => {
 };
 // More es6 ish 
 reverse = (str) => {
+    debugger;
     return str.split('').reduce((rev, char) => char + rev, '');
   };
 
 
-
-
 console.log(reverse('Waffle house'));
 console.log(reverse('Eat Crow Joe'));
+
+
 module.exports = reverse;
