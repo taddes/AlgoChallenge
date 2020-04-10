@@ -5,7 +5,7 @@ test('palindrome function is defined', () => {
 });
 
 test('"aba" is a palindrome.', () => {
-    expect(plaindrome('aba')).toBeTruthy();
+    expect(palindrome('aba')).toBeTruthy();
 });
 
 test(' "aba" is not a plaindrome', () => {
