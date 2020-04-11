@@ -15,8 +15,14 @@
 
 def rev_int(n):
     """Use list comprehension"""
-    rev = [char for char in str(n)]
+    if n < 0:
+        sign = -1
+    else:
+        sign = 1
+    rev = [char for char in str(n) if char.isnumeric()]
+    print(rev)
     rev.reverse()
-    return int(''.join(rev))
+    print(rev)
+    return int(''.join(rev)) * sign
 
-print(rev_int(89))
+print(rev_int(-89))
