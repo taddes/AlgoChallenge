@@ -9,3 +9,6 @@
     anagrams('RAIL! SAFETY!', 'fairy tales') --> True
     anagrams('Hi there', 'Bye there') --> False
 """
+
+def is_anagram(str_a, str_b):
+    pass
