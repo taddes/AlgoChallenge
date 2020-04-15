@@ -9,6 +9,11 @@
     anagrams('RAIL! SAFETY!', 'fairy tales') --> True
     anagrams('Hi there', 'Bye there') --> False
 """
+import re
 
 def is_anagram(str_a, str_b):
-    pass
+    str_a_strip = re.sub(r'[^\w]', '',  str_a).lower()
+    str_b_strip = re.sub(r'[^\w]', '', str_b).lower()
+    print(str_a_strip, str_b_strip)
+
+is_anagram('KARK JARK', 'Lethan! BoHn')
