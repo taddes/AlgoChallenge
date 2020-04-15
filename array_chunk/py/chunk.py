@@ -9,6 +9,29 @@
     chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
     chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 """
+# Solution 1
+# def chunk_list(array, size):
+#     chunked = []
+#     for element in array:
+#         if len(chunked) == 0:
+#             last = chunked
+#         else:
+#             last = chunked[len(chunked) - 1]
 
+#         if not last or len(last) == size:
+#             chunked.append([element])
+#         else:
+#             last.append(element)
+#     return chunked
+
+# Solution 2
 def chunk_list(array, size):
-    return
+    chunked = []
+    index = 0
+    print(len(array), index)
+    while index < len(array):
+        chunked.append(array[index:size+index])
+        index += size
+    return chunked
+        
+print(chunk_list([1,2,3,4,5], 2))
