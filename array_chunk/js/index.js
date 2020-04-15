@@ -25,8 +25,8 @@
 
 // Solution 2 = Array slicing
 function chunk(array, size) {
-    chunked = [];
-    index = 0;
+    let chunked = [];
+    let index = 0;
     while (index < array.length) {
         chunked.push(array.slice(index, size+index));
         index += size;
