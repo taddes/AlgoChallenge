@@ -23,8 +23,17 @@
 //     return chunked;
 // }
 
-// Solution 3
+// Solution 2 = Array slicing
+function chunk(array, size) {
+    chunked = [];
+    index = 0;
+    while (index < array.length) {
+        chunked.push(array.slice(index, size+index));
+        index += size;
+    }
+    return chunked;
+}
 
-chunk([1,2,3,4], 2)
+console.log(chunk([1,2,3,4, 5], 2))
 
 module.exports = chunk;

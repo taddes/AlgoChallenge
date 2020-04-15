@@ -12,3 +12,12 @@ Iterate through the 'unchunked' array:
         Push a new chunk to 'chunked' array with the current element
     ELSE
         add the current element into the chunk
+
+
+SLICING SOLUTION
+
+Create empty chunked array
+Create an indexing variable, set to 0
+While loop - while index is less than original array length
+    Push a slize of index 'size' from array into chunked
+    Add size to index
