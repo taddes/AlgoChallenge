@@ -48,7 +48,7 @@ function steps(n) {
 }
 
 steps(5);
-module.exports = steps;
+
 
 // Recursive Solution
 // Figure out the bare minimum pieces to represent the problem
@@ -68,3 +68,5 @@ function steps(n) {
     console.log(n)
 
 }
+
+module.exports = steps;
