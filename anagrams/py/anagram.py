@@ -11,9 +11,22 @@
 """
 import re
 
-def is_anagram(str_a, str_b):
-    str_a_strip = re.sub(r'[^\w]', '',  str_a).lower()
-    str_b_strip = re.sub(r'[^\w]', '', str_b).lower()
-    print(str_a_strip, str_b_strip)
+# def is_anagram(str_a, str_b):
+#     str_a_strip = re.sub(r'[^\w]', '',  str_a).lower()
+#     str_b_strip = re.sub(r'[^\w]', '', str_b).lower()
+#     print(str_a_strip, str_b_strip)
 
-is_anagram('KARK JARK', 'Lethan! BoHn')
+
+# Solution 2
+# Exact comparision of the exact same string!!! Very clean, easy way to solve
+def clean_str(str):
+    cleaned = re.sub(r'[^/w]', '', str).lower()
+    print(cleaned)
+
+def is_anagram(str_a, str_b):
+    print(clean_str(str_a), clean_str(str_b))
+    return clean_str(str_a) == clean_str(str_b)
+
+
+
+print(is_anagram('KARK JARK', 'Lethan! BoHn')) 
