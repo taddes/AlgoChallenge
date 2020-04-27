@@ -47,26 +47,38 @@ function steps(n) {
   }
 }
 
-steps(5);
+
 
 
 // Recursive Solution
 // Figure out the bare minimum pieces to represent the problem
-// Five reasonable defaults to the bare minimum pieces of info
+// Give reasonable defaults to the bare minimum pieces of info
 // Check base case. Is there any work left to do? If not, return
 // Do some work, call your function again, making sure the arguments have changed in some fashiion
 
 // 1. If (row === n) then we have hit the end of our problem
+//        Ex. If only a 3 row pyramid, once you hit row 3, you're done
 // 2. If the stair string has a length === n then we are at the end of a row
 // 3. If the length of the stair string is less than or equal to the row number
 // we're working on, add a #, otherwise add a space
-function steps(n) {
-    if (n === 0) {
-        return;
-    }
+function steps(n, row = 0, stair = '') {
+  if (n === row) {
+    return;
+  }
 
-    console.log(n)
+  if (n === stair.length) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
 
+  if (stair.length <= row) {
+    stair += "#";
+  } else {
+    stair += " ";
+  }
+  steps(n, row, stair);
 }
+
+steps(5);
 
 module.exports = steps;

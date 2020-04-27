@@ -1,0 +1,8 @@
+QUEUE
+=====
+Line at a ticket booth. First in line, first to be served.
+FIFO - First In, First Out
+
+
+Enqueuing/ Adding -> array.unshift()
+Dequeuing/Removing -> array.pop()
