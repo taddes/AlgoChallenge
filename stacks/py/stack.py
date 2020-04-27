@@ -10,4 +10,9 @@
 #   s.pop(); // returns 2
 #   s.pop(); // returns 1
 
+class Stack:
+    def __init__(self, data):
+        self.data = data
 
+    def push(self, record):
+        data.push(record)
