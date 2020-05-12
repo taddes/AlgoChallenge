@@ -12,9 +12,10 @@ fib(4) === 3
 
 def fib(n):
     fib_list = [0, 1]
-    for index, number in enumerate(range(0, n + 1)):
-        print(index, number, fib_list[index -1])
-        fib_list.append(number + fib_list[index - 1])
+    for number in range(2, n + 1):
+        a = fib_list[number - 1]
+        b = fib_list[number - 2]
+        fib_list.append(a+b)
     return fib_list
 
-print(fib(5))
+print(fib(6))
