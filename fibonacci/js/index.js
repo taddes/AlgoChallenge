@@ -18,7 +18,11 @@ function fib(n) {
     result.push(a + b);
   }
   return result[n]
+}
 
+
+function fibRecursive(n) {
+  const result = [0, 1];
 }
 
 module.exports = fib;
