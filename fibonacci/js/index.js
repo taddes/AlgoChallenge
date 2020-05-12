@@ -17,12 +17,16 @@ function fib(n) {
     const b = result[i - 2];
     result.push(a + b);
   }
-  return result[n]
+  return result[n];
 }
 
 
 function fibRecursive(n) {
-  const result = [0, 1];
+  if (n < 2) {
+    return n;
+  }
+  return fibRecursive(n - 1) + fibRecursive(n - 2);
 }
 
+console.log(fibRecursive(6));
 module.exports = fib;
