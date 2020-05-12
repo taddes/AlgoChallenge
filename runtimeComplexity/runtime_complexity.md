@@ -8,7 +8,7 @@ Iterative solution using for loop
 Linear runtime
 Direct 1:1 relationship between input and work to process
 1 additional unit of work for each element that is added
-```
+```javascript
 function reverse(str) {
   let reversed = '';
 
@@ -62,3 +62,6 @@ Still **O(n)**. There are no constants in a runtime. Always simplify to O(n)
 #### Searching (sorted array)?
 **O(log(n))**
 
+
+## Space Complexity
+### How much memory is required to complete the task?

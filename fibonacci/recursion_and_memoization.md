@@ -1,6 +1,7 @@
-## Recursive solution to fibonacci
+## Recursive solution to Fibonacci
 Common knowlege. Less about testing your ability, but more as to whether you understand the problem from previous experience. People can answer it this way because they've seen it before!
 
+### Runtime complexity
 Exponential Time **O(2^n)**solution (generally unscalable). Dramatic increase in the number of operations for each value added
 
 ### Base case
@@ -34,10 +35,11 @@ def fib_recursive(n):
 
   COUNT UP fib(1) ... fib(6) == 8
 ```
+### Can you improve the runtime efficiency of the recursive Fibonacci solution?
+*False flag question. You have to know this already, not invent it on call*
+The fib function gets called a *lot* for the identical arguments. Can this be reduced? How do we prevent spawning countless function calls.
+
 
 ## Memoization
 Store the arguments of each function call along with the result. If the function is called again with tehs ame arguments, return the precomputed result, rather than running the function again. Caching
 
-### Can you improve the runtime efficiency of the recursive Fibonacci solution?
-*False flag question. You have to know this already, not invent it on call*
-The fib function gets called a *lot* for the identical arguments. Can this be reduced? How do we prevent spawning countless function calls.
