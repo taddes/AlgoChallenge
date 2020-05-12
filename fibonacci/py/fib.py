@@ -11,5 +11,10 @@ fib(4) === 3
 """
 
 def fib(n):
-    pass
+    fib_list = [0, 1]
+    for index, number in enumerate(range(0, n + 1)):
+        print(index, number, fib_list[index -1])
+        fib_list.append(number + fib_list[index - 1])
+    return fib_list
 
+print(fib(5))
