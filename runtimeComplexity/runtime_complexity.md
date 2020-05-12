@@ -27,7 +27,6 @@ No matter how many elements we're working with, the algorithm/operation/whatever
 ### Linear Time O(n)
 Iterating through all elements in a collection. If you seee a loop spanning 0 to the last element of an array, you probably have 'n', or linear runtime
 
-
 ### Logarithmic Time O(log n)
 If you are iterating over something and it doesn't double the amount of work. Always assume that searching operations are log(n)
 
@@ -39,3 +38,27 @@ If you are doubling the number of elements you are iterating over and doesn't do
 
 ### Exponential Time O(2^n)
 If you add a single element to a collection, the required processing doubles. Terrible and to be avoided.
+
+## Identifying Runtime Complexity
+
+#### Iterating with a simple loop through a single collection?
+Probably **O(n)**
+
+#### Iterating through half a collection? A smaller value modifying the loop?
+Still **O(n)**. There are no constants in a runtime. Always simplify to O(n)
+
+#### Iterating through two different collections with seperate loops?
+**O(n + m)** can simplify to **O(n)**. Good to split into two seperate terms.
+
+#### Two nested loops iterating over the same collections?
+**O(n^2)** A general red flag for efficiency. Quadratic 
+
+#### Two nested for loops iterating over different collections?
+**O(n*m)** varied lenghts of both can have an effect. Simplifies to **O(n^2)**
+
+#### Sorting?
+**O(n*log(n))**
+
+#### Searching (sorted array)?
+**O(log(n))**
+
