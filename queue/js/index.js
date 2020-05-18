@@ -15,11 +15,11 @@ class Queue {
     }
   
     add(record) {
-      this.data.unshift(record);
+      this.data.push(record);
     }
   
     remove() {
-      return this.data.pop();
+      return this.data.shift();
     }
   }
   

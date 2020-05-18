@@ -3,10 +3,10 @@ class Queue:
         self.data = data
 
     def add(self, record):
-        self.data.insert(len(self.data), record)
+        self.data.append(record)
     
     def remove(self):
-        del self.data[0]
+        return self.data.pop(0)
 
 myq = Queue([1,2,3,4])
 

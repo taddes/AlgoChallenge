@@ -1,6 +1,6 @@
-Stack
------------------
-FILO - FIRST IN LAST OUT
+## Stack
+
+**FILO - FIRST IN LAST OUT**
 
 Last/Latest record in is the first record out
 
