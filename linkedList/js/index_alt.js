@@ -21,14 +21,18 @@ class LinkedList {
 
   size() {
     let counter = 0;
-    let node = this.head;
 
-    while (node) {
-      counter++;
-      node = node.next;
+    if (this.head === null) {
+      return counter;
+    } else {
+      let nextNode = this.head.next;
+      counter += 1
+      while (nextNode) {
+        counter += 1
+        nextNode = nextNode.next
+      }
+      return counter;
     }
-    
-    return counter;
   }
 }
 
@@ -39,8 +43,6 @@ list = new LinkedList()
 
 list.insertFirst(123)
 list.insertFirst(456)
-list.insertFirst(7)
-list.insertFirst(89)
 console.log(list)
 console.log(list.size())
 
