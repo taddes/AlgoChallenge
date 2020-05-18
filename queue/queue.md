@@ -9,9 +9,9 @@ JavaScript and Python both have native array/list methods that emulate queue fun
 
 Basically, you have to restrict the functions of native array/list operations to create a queue. Class based approach effective to model the data structure.
 
-* Enqueuing/ Adding -> array.unshift() or list.pop([i]) or del list[i]
-  * Time Complexity: O(1)
-* Dequeuing/Removing -> array.pop() or list.pop()
+* Enqueuing/ Adding -> array.shift() or list.pop([i]) or del list[i]
+    * Time Complexity: O(1)
+* Dequeuing/Removing -> array.shift() or list.pop(0)
     * Time Complexity: O(1)
 
 ```javascript
@@ -21,11 +21,11 @@ class Queue {
   }
 
   remove = () => {
-    return this.data.pop()
+    return this.data.shift()
   }
 
   add = (item) => {
-    returh this.data.unshift(item)
+    returh this.data.push(item)
   }
 }
 ```

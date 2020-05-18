@@ -4,15 +4,25 @@
 
 class Node {
   constructor(data, next=null) {
-    this.data = data
-    this.next = next
+    this.data = data;
+    this.next = next;
   }
 }
 
-class LinkedList {}
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
 
-n = new Node(123)
-console.log(n)
-console.log(n.data)
+  insertFirst(data) {
+    const node = new Node(data, this.head);
+    this.head = node;
+
+  }
+}
+
+n = new Node(123);
+console.log(n);
+console.log(n.data);
 
 module.exports = { Node, LinkedList };
