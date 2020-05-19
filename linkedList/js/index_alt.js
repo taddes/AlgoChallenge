@@ -34,6 +34,70 @@ class LinkedList {
       return counter;
     }
   }
+
+  getFirst() {
+    return this.head;
+  }
+
+  getLast() {
+    let node = this.head;
+    if (!node) {
+      return null;
+    } 
+
+    while (node) {
+      if (node.next === null) {
+        return node;
+      }
+      node = node.next
+    }
+  }
+
+  clear() {
+    this.head = null; 
+  }
+
+  removeFirst() {
+    if (!this.head) {
+      return null;
+    }
+    this.head = this.head.next
+  }
+
+  removeLast() {
+    if (!this.head) {
+      return null;
+    } else if (!this.head.next) {
+      return null;
+    } else {
+      let currentNode = this.head;
+      let previousNode = this.head.next;
+      while (currentNode) {
+        if (previousNode.next === null) {
+         currentNode.next = null;
+        }
+        currentNode = previousNode
+        previousNode = previousNode.next
+      }
+    }
+  }
+
+  insertLast(data) {
+    let last;
+    if (!this.head) {
+      last = null;
+    }
+    let node = this.head;
+
+    while (node) {
+      if (!node.next) {
+        last = node;
+        break;
+      }
+      node = node.next;
+    }
+    last.next = new Node(data)
+  }
 }
 
 

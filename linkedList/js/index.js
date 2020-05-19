@@ -27,9 +27,70 @@ class LinkedList {
       counter++;
       node = node.next;
     }
-    
+
     return counter;
   }
+
+  getFirst() {
+    return this.head;
+  }
+
+  getLast() {
+    if (!this.head) {
+      return null;
+    } 
+
+    let node = this.head;
+
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
+  }
+
+  clear() {
+    this.head = null;
+  }
+
+  removeFirst() {
+    if (!this.head) {
+      return null;
+    }
+    this.head = this.head.next;
+  }
+
+  removeLast() {
+    if (!this.head) {
+      return;
+    }
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
+
+    let previous = this.head;
+    let nextNode = this.head.next;
+    while (nextNode.next) {
+      previous = nextNode;
+      nextNode = nextNode.next;
+      }
+      previous.next = null;
+  }
+
+  insertLast(data) {
+    const last = this.getLast();
+
+    if (last) {
+      // Nodes exist
+      last.next = new Node(data)
+    } else {
+      // chain empty
+      this.head = new Node(data)
+    }
+  }
+
 }
 
 
