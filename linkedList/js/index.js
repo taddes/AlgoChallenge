@@ -84,11 +84,21 @@ class LinkedList {
 
     if (last) {
       // Nodes exist
-      last.next = new Node(data)
+      last.next = new Node(data);
     } else {
       // chain empty
-      this.head = new Node(data)
+      this.head = new Node(data);
     }
+  }
+
+  getAt(index) {
+    let node = this.head;
+    let counter = 0;
+    while (counter !== index) {
+      node = node.next;
+      counter++
+    }
+    return node;
   }
 
 }

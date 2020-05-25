@@ -98,6 +98,16 @@ class LinkedList {
     }
     last.next = new Node(data)
   }
+
+  getAt(index) {
+    let node = this.head;
+    let counter = 0;
+    while (counter !== index) {
+      node = node.next;
+      counter++
+    }
+    return node;
+  }
 }
 
 
