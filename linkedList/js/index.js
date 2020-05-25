@@ -112,12 +112,19 @@ class LinkedList {
     }  
 
     if (index === 0) {
-      // catches null as well
+      // catches the case if there is only one item. this.head.next is null
+      // if there is only one element.
       this.head = this.head.next;
+      return;
     }
 
     const previous = this.getAt(index - 1);
     // get node occuring right before index
+    if (!previous || !previous.next) {
+      return;
+    }
+
+    previous.next = previous.next.next
   }
 
 
