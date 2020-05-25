@@ -115,6 +115,9 @@ class LinkedList {
       // catches null as well
       this.head = this.head.next;
     }
+
+    const previous = this.getAt(index - 1);
+    // get node occuring right before index
   }
 
 
