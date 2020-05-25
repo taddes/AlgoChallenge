@@ -94,12 +94,31 @@ class LinkedList {
   getAt(index) {
     let node = this.head;
     let counter = 0;
-    while (counter !== index) {
-      node = node.next;
+
+    while (node) {
+      // This evaluates to falsy if node is null, or out of index of list.
+      if (counter === index) {
+        return node;
+      }
       counter++
+      node = node.next;
     }
-    return node;
+    return null;
   }
+
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }  
+
+    if (index === 0) {
+      // catches null as well
+      this.head = this.head.next;
+    }
+  }
+
+
+
 
 }
 
