@@ -142,11 +142,25 @@ class LinkedList {
     const node = new Node(data, previous.next);
     previous.next = node;
   }
+  
+  forEach(func) {
+    let node = this.head;
+    let counter = 0;
+    while (node) {
+      func(node, counter);
+      node = node.next;
+      counter++;
+    }
+  }
 
-
+  *[Symbol.literator]() {
+    let node = this.head;
+    while (node) {
+      yield node;
+      node = node.next;
+    }
+  }
 }
-
-
 
 
 list = new LinkedList()
