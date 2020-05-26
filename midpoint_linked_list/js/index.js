@@ -12,6 +12,11 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
-function midpoint(list) {}
+/* 
+Linked list strategy 
+*/
+function midpoint(list) {
+
+}
 
 module.exports = midpoint;

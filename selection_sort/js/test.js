@@ -10,7 +10,6 @@ function getSortedArray() {
   return [-124, -40, 0, 7, 21, 100, 500];
 }
 
-
 describe('Selection sort', () => {
   test('sorts an array', () => {
     expect(selectionSort(getArray())).toEqual(getSortedArray());

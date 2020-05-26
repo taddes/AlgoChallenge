@@ -22,6 +22,12 @@
 //    q.remove() // 2
 //    q.remove() // 'There'
 
+
+/*
+Since peek() will return undefined in the case there's nothing at the end of the queue,
+it will help us cover the case if elements in one are iterated through, but not yet
+done in the other.
+*/
 const Queue = require('./queue');
 
 function weave(sourceOne, sourceTwo) {
@@ -35,7 +41,7 @@ function weave(sourceOne, sourceTwo) {
       q.add(sourceTwo.remove());
     }
   }
-  return q
+  return q;
 }
 
 module.exports = weave;
