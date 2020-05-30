@@ -61,6 +61,8 @@ function steps(n) {
 // 2. If the stair string has a length === n then we are at the end of a row
 // 3. If the length of the stair string is less than or equal to the row number
 // we're working on, add a #, otherwise add a space
+
+
 function steps(n, row = 0, stair = '') {
   if (n === row) {
     return;
