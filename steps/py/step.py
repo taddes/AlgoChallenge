@@ -48,17 +48,16 @@ stairs(3)
 stairs(4)
 stairs(5)
 
-def reversed_stairs(n):
+def reverse_stairs(n):
     for row in range(n):
         stair = ""
         for column in range(n):
-            if column >= row:
+            if column >= n:
                 stair += "#"
             else:
-                stair += ''
+                stair += " "
         print(stair)
-            
 
-reversed_stairs(3)
-reversed_stairs(4)
-reversed_stairs(5)
+reverse_stairs(3)
+reverse_stairs(4)
+reverse_stairs(5)
