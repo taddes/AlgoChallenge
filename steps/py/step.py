@@ -52,10 +52,10 @@ def reverse_stairs(n):
     for row in range(n):
         stair = ""
         for column in range(n):
-            if column >= n:
-                stair += "#"
+            if column <= row:
+                stair = '#' + stair
             else:
-                stair += " "
+                stair = ' ' + stair
         print(stair)
 
 reverse_stairs(3)
