@@ -22,5 +22,16 @@
             if the coumn
 """
 def pyramid(n):
-    pass
+    midpoint = (2 * n - 1 ) // 2
+    print(midpoint)
+    for row in range(n):
+        level = ''
+        for column in range(2 * n -1):
+            if midpoint - row <= column and midpoint + row >= column:
+                level += '#'
+            else:
+                level += ' '
+        print(level)
 
+
+pyramid(3)
